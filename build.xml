@@ -4,11 +4,9 @@
       <compilerArg value="-Xlint"/>
     </javac>
   </target>
-  <target name="package" depends="compile">
-    <war file="build/app.war" webxml="src/main/webapp/WEB-INF/web.xml">
+  <target name="jar" depends="compile">
+    <war file="build/app.jar">
       <fileset dir="build/classes"/>
-      <fileset dir="src/main/webapp" 
-               excludes="WEB-INF/web.xml"/>
     </war>
   </target>
   <target name="test" depends="compile">
@@ -53,5 +51,5 @@
   <target name="clean">
     <delete dir="build"/>
   </target>
-  <target name="all" depends="war,test,javadoc,findbugs"/>
+  <target name="all" depends="jar,test,javadoc,findbugs"/>
 </project>
