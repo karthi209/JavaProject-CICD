@@ -4,10 +4,10 @@
       <compilerArg value="-Xlint"/>
     </javac>
   </target>
-  <target name="jar" depends="compile">
-    <jar file="build/app.jar">
+  <target name="war" depends="compile">
+    <war file="build/app.war">
       <fileset dir="build/classes"/>
-    </jar>
+    </war>
   </target>
   <target name="test" depends="compile">
     <mkdir dir="build/test-classes"/>
@@ -51,5 +51,5 @@
   <target name="clean">
     <delete dir="build"/>
   </target>
-  <target name="all" depends="jar,test,javadoc,findbugs"/>
+  <target name="all" depends="war,test,javadoc,findbugs"/>
 </project>
