@@ -5,9 +5,9 @@
     </javac>
   </target>
   <target name="jar" depends="compile">
-    <war file="build/app.jar">
+    <jar file="build/app.jar">
       <fileset dir="build/classes"/>
-    </war>
+    </jar>
   </target>
   <target name="test" depends="compile">
     <mkdir dir="build/test-classes"/>
