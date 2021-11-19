@@ -10,7 +10,7 @@ public class App {
     }
 
     public void thisCreatesCompilerWarnings() {
-        List a = new ArrayList();
+        List<String> a = new ArrayList<String>();
         a.add("foo");
     }
 
