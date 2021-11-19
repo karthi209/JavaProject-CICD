@@ -4,9 +4,11 @@
       <compilerArg value="-Xlint"/>
     </javac>
   </target>
-  <target name="war" depends="compile">
-    <war file="build/app.war">
+  <target name="package" depends="compile">
+    <war file="build/app.war" webxml="src/main/webapp/WEB-INF/web.xml">
       <fileset dir="build/classes"/>
+      <fileset dir="src/main/webapp" 
+               excludes="WEB-INF/web.xml"/>
     </war>
   </target>
   <target name="test" depends="compile">
