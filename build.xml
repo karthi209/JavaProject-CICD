@@ -1,6 +1,6 @@
 <project default="all">
   <target name="compile"> <mkdir dir="build/classes"/>
-    <javac srcdir="src" destdir="build/classes">
+    <javac includeantruntime="false" srcdir="src" destdir="build/classes">
       <compilerArg value="-Xlint"/>
     </javac>
   </target>
@@ -11,7 +11,7 @@
   </target>
   <target name="test" depends="compile">
     <mkdir dir="build/test-classes"/>
-    <javac srcdir="test" destdir="build/test-classes" debug="on">
+    <javac includeantruntime="false" srcdir="test" destdir="build/test-classes" debug="on">
       <classpath>
         <pathelement path="build/classes"/>
         <fileset dir="lib" includes="*.jar"/>
