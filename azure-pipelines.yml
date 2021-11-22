@@ -42,6 +42,6 @@ steps:
   inputs:
     command: publish
     publishDirectory: '$(Build.ArtifactStagingDirectory)'
-    vstsFeedPublish: 'JavaProject-CICD/karthikeyan14june'
+    vstsFeedPublish: 'JavaProject-CICD/newFeednew'
     vstsFeedPackagePublish: 'AppPackage'
     packagePublishDescription: 'Jarfile with Java and Manifest.'
